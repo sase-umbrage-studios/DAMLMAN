@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", sans-serif;
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    background-color: rgba(0,0,0,0.01);
+    box-sizing: border-box;
+    padding: 5%;
+    margin-top: 5px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 49vw 2px 49vw;
+    place-items: center;
+}
+
+.divider {
+    width: 2px;
+    height: 87vh;
+    background: rgba(0,0,0,0.1);
+}
+
+.category-and-buttons, .contracts-and-contract-ids {
+    width: 90%;
+    height: 90vh;
+    max-height: 90vh;
+    overflow: scroll;
+}
+
+.contracts-and-contract-ids {
+    display: grid;
+    grid-template-rows: 39vh 50vh;
+    grid-row-gap: 1vh;
+}
+
+.buttons {
+    width: 100%;
+    height: 60vh;
+}
+
+.category-name {
+    display: grid;
+    box-sizing: border-box;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,0.025);
+    margin-top: 10px;
+}
+
+.button-data-name {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid rgba(0,0,0,0.025);
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    padding-left: 10%;
+    transition: all 300ms;
+}
+
+.button-data-name:hover, .party-display:hover {
+    cursor: pointer;
+}
+
+.button-data-name:active, .party-display:active {
+    scale: 0.9;
+}
+
+.party-display {
+    position: relative;
+    height: 9.5vh;
+    width: calc(49vw * 0.9);
+    display: grid;
+    place-items: center;
+    color: rgba(0,0,0,0.85);
+    border: 2px solid rgba(0,0,0,0.025);
+    box-sizing: border-box;
+    transition: all 300ms;
+    font-size: 0.75vw;
+}
+
+input.search {
+    width: 100%;
+    height: 5vh;
+    border: none;
+    background-color: rgba(0,0,0,0.025);
+    box-sizing: border-box;
+    text-align: center;
+}
+input.search:focus, input.search:active {
+    outline: none;
+}
+
+.party-display-name {
+    position: absolute;
+    width: max-content;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    top: -10px;
+    left: 2.4vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: whitesmoke;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.contracts-with-json {
+    position: relative;
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+.contract-display-name {
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid rgba(0,0,0,0.025);
+    overflow: hidden;
+    font-weight: 600;
+}
+
+#json {
+    position: relative;
+    width: 100%;
+    max-width: calc(.9 * 49vw);
+}
+
+.main-party-and-contractids {
+    display: grid;
+    align-items: end;
+}
